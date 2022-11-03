@@ -1,0 +1,10 @@
+https://docs.salome-platform.org/latest/gui/SMESH/tui_creating_meshes.html
+https://www.math.univ-paris13.fr/~cuvelier/software/
+http://www.open3d.org/docs/release/python_api/open3d.geometry.TetraMesh.html
+https://pypi.org/project/MeshPy/
+https://github.com/nschloe/meshio
+https://github.com/pyvista/tetgen
+https://github.com/vedranaa/icosphere
+https://github.com/dengwirda/icosahedron
+https://en.wikipedia.org/wiki/Platonic_solid
+https://pymesh.readthedocs.io/en/latest/api_procedural_mesh_generation.html
