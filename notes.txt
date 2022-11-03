@@ -8,3 +8,6 @@ https://github.com/vedranaa/icosphere
 https://github.com/dengwirda/icosahedron
 https://en.wikipedia.org/wiki/Platonic_solid
 https://pymesh.readthedocs.io/en/latest/api_procedural_mesh_generation.html
+
+REGULAR TETRAHEDRONS CANNOT TESSLATE SPACE:
+https://www.youtube.com/watch?v=OxDVzl5WZQA&ab_channel=Mathemaniac
