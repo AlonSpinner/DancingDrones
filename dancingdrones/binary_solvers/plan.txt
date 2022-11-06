@@ -20,39 +20,43 @@ Irrelevant action pruning by backward reachability from goal...
 Uninterestingness criteria...
 Compression-safe actions...
 Compression-safe invariants...
-Goal Goal [2]
-    (robot_at r1 l53)
-    (robot_at r0 l55)
+Goal Goal [3]
+    (robot_at r2 l35)
+    (robot_at r1 l12)
+    (robot_at r0 l0)
 
 Finishing preprocessing.  Making a TRPG heuristic...
 Making an open list...
 Running WA* search (g weight = 1, h weight = 5)
-{(robot_at r0 l0),(robot_at r1 l5),(location_is_free l1),(location_is_free l2),(location_is_free l3),(location_is_free l4),(location_is_free l6),(location_is_free l7),(location_is_free l8),(location_is_free l9),(location_is_free l10),(location_is_free l11),(location_is_free l12),(location_is_free l13),(location_is_free l14),(location_is_free l15),(location_is_free l16),(location_is_free l17),(location_is_free l18),(location_is_free l19),(location_is_free l20),(location_is_free l21),(location_is_free l22),(location_is_free l23),(location_is_free l24),(location_is_free l25),(location_is_free l26),(location_is_free l27),(location_is_free l28),(location_is_free l29),(location_is_free l30),(location_is_free l31),(location_is_free l32),(location_is_free l33),(location_is_free l34),(location_is_free l35),(location_is_free l36),(location_is_free l37),(location_is_free l38),(location_is_free l39),(location_is_free l40),(location_is_free l41),(location_is_free l42),(location_is_free l43),(location_is_free l44),(location_is_free l45),(location_is_free l46),(location_is_free l47),(location_is_free l48),(location_is_free l49),(location_is_free l50),(location_is_free l51),(location_is_free l52),(location_is_free l53),(location_is_free l54),(location_is_free l55)}
+{(robot_at r0 l38),(robot_at r1 l43),(robot_at r2 l4),(location_is_free l0),(location_is_free l1),(location_is_free l2),(location_is_free l3),(location_is_free l5),(location_is_free l6),(location_is_free l7),(location_is_free l8),(location_is_free l9),(location_is_free l10),(location_is_free l11),(location_is_free l12),(location_is_free l13),(location_is_free l14),(location_is_free l15),(location_is_free l16),(location_is_free l17),(location_is_free l18),(location_is_free l19),(location_is_free l20),(location_is_free l21),(location_is_free l22),(location_is_free l23),(location_is_free l24),(location_is_free l25),(location_is_free l26),(location_is_free l27),(location_is_free l28),(location_is_free l29),(location_is_free l30),(location_is_free l31),(location_is_free l32),(location_is_free l33),(location_is_free l34),(location_is_free l35),(location_is_free l36),(location_is_free l37),(location_is_free l39),(location_is_free l40),(location_is_free l41),(location_is_free l42),(location_is_free l44),(location_is_free l45),(location_is_free l46),(location_is_free l47),(location_is_free l48),(location_is_free l49),(location_is_free l50),(location_is_free l51),(location_is_free l52),(location_is_free l53),(location_is_free l54),(location_is_free l55)}
 []
-Initial heuristic = 12
-Initial stats: t=0s, 6584kb
-b (11 @ n=2, t=0s, 6584kb)b (10 @ n=13, t=0s, 6584kb)b (9 @ n=24, t=0s, 6584kb)b (8 @ n=36, t=0.01s, 6584kb)b (7 @ n=43, t=0.01s, 6584kb)b (6 @ n=59, t=0.01s, 6584kb)b (5 @ n=71, t=0.01s, 6584kb)b (4 @ n=84, t=0.01s, 6584kb)b (3 @ n=92, t=0.01s, 6584kb)b (2 @ n=100, t=0.01s, 6584kb)b (1 @ n=108, t=0.01s, 6584kb)
+Initial heuristic = 16
+Initial stats: t=0s, 7108kb
+b (14 @ n=4, t=0.01s, 7108kb)b (13 @ n=21, t=0.01s, 7108kb)b (12 @ n=35, t=0.01s, 7108kb)b (11 @ n=47, t=0.01s, 7108kb)b (10 @ n=64, t=0.01s, 7108kb)b (9 @ n=74, t=0.02s, 7108kb)b (8 @ n=90, t=0.02s, 7108kb)b (7 @ n=101, t=0.02s, 7108kb)b (6 @ n=116, t=0.02s, 7108kb)b (5 @ n=123, t=0.02s, 7108kb)b (4 @ n=142, t=0.02s, 7108kb)b (3 @ n=155, t=0.02s, 7108kb)b (2 @ n=161, t=0.02s, 7108kb)b (1 @ n=172, t=0.02s, 7108kb)
 ;;;; Solution Found
-; Time 0.01
-; Discounted time: 0.016
+; Time 0.03
+; Discounted time: 0.031
 ; Metareasoning time: 0
-; Peak memory 6584kb
-; Nodes Generated: 115
-; Nodes Expanded:  12
-; Nodes Evaluated: 115
+; Peak memory 7108kb
+; Nodes Generated: 195
+; Nodes Expanded:  15
+; Nodes Evaluated: 183
 ; Nodes Tunneled:  0
 ; Nodes memoised with open actions: 0
-; Nodes memoised without open actions: 141
-; Nodes pruned by memoisation: 26
-0: (move r0 l0 l1) [1]
-1: (move r0 l1 l15) [1]
-2: (move r0 l15 l19) [1]
-3: (move r0 l19 l23) [1]
-4: (move r1 l5 l19) [1]
-5: (move r1 l19 l22) [1]
-6: (move r1 l22 l25) [1]
-7: (move r0 l23 l27) [1]
-8: (move r1 l25 l39) [1]
-9: (move r0 l27 l41) [1]
-10: (move r1 l39 l53) [1]
-11: (move r0 l41 l55) [1]
+; Nodes memoised without open actions: 225
+; Nodes pruned by memoisation: 30
+0: (move r2 l4 l18) [1]
+1: (move r2 l18 l21) [1]
+2: (move r0 l38 l24) [1]
+3: (move r0 l24 l10) [1]
+4: (move r1 l43 l29) [1]
+5: (move r1 l29 l15) [1]
+6: (move r1 l15 l18) [1]
+7: (move r1 l18 l22) [1]
+8: (move r1 l22 l26) [1]
+9: (move r1 l26 l12) [1]
+10: (move r2 l21 l35) [1]
+11: (move r0 l10 l6) [1]
+12: (move r0 l6 l2) [1]
+13: (move r0 l2 l1) [1]
+14: (move r0 l1 l0) [1]

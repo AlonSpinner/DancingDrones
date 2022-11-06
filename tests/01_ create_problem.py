@@ -9,7 +9,9 @@ import numpy as np
 env = mesh_3D(edge_length = 1.0, N_cols_even = 4, N_rows = 4, N_depth = 4)
 
 domain = create_domain()
-start = [0,5]; goal = [env.vertices.shape[0] - 1, env.vertices.shape[0] - 3]
+N_drones = 3
+start = np.random.randint(0, env.N_vertices() - 1, N_drones)
+goal = np.random.randint(0, env.N_vertices() - 1, N_drones)
 problem = create_problem(env, domain, start, goal)
 write_pddls(problem)
 
@@ -17,7 +19,7 @@ execution_times, actions, durations = solve(engine_name = 'optic')
 
 plan = plan_per_agent(execution_times, actions)
 finish_time = np.max(execution_times) + 1.0
-N_points = 1000
+N_points = 100
 time_vec = np.linspace(0,finish_time,N_points)
 trajectories = {}
 for agent in plan:
@@ -42,7 +44,7 @@ for agent in trajectories:
     ax.scatter(trajectories[agent][0,0],
                trajectories[agent][0,1], 
                trajectories[agent][0,2], 
-               color = colors[agent], s = 100, marker = 'x')
+               color = colors[agent], s = 100, marker = 'o')
     ax.scatter(trajectories[agent][-1,0],
                trajectories[agent][-1,1], 
                trajectories[agent][-1,2], 

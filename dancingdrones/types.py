@@ -7,6 +7,9 @@ class Enviorment:
     vertices : np.ndarray
     connectivityList : dict[np.ndarray[int]]
 
+    def N_vertices(self) -> int:
+        return self.vertices.shape[0]
+
 @dataclass(frozen = False)
 class Domain:
         problem : Problem
