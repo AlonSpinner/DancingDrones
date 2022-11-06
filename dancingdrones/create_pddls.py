@@ -12,6 +12,8 @@ up.shortcuts.get_env().credits_stream = None #removes the printing planners cred
 
 from dataclasses import dataclass
 import numpy as np
+import os
+from dancingdrones.binary_solvers.paths import DOMAIN_PATH, PROBLEM_PATH
 
 @dataclass(frozen = False)
 class Enviorment:
@@ -33,14 +35,12 @@ def create_domain() -> None:
     robot_at = Fluent('robot_at', BoolType(), r = robot, l = location)
     is_connected = Fluent('is_connected', BoolType(), l_from = location, l_to = location)
     location_is_free = Fluent('location_is_free', BoolType(), l = location)
-    road_is_free = Fluent('road_is_free',BoolType(), l_from = location, l_to = location)
     
     move = InstantaneousAction('move',  r = robot, l_from = location, l_to = location)
     r = move.parameter('r')
     l_from = move.parameter('l_from')
     l_to = move.parameter('l_to')
     move.add_precondition(is_connected(l_from, l_to))
-    move.add_precondition(road_is_free(l_to,l_from)) #opposite way
     move.add_precondition(robot_at(r, l_from))
     move.add_precondition(location_is_free(l_to))
     move.add_effect(robot_at(r, l_from), False)
@@ -53,14 +53,12 @@ def create_domain() -> None:
     problem.add_fluent(robot_at, default_initial_value = False)
     problem.add_fluent(is_connected, default_initial_value = False)
     problem.add_fluent(location_is_free, default_initial_value = True)
-    problem.add_fluent(road_is_free, default_initial_value = True)
     
     Types =  {"robot": robot,
                  "location": location}
     Fluents = {"robot_at": robot_at, 
                 "is_connected": is_connected,
-                "location_is_free" : location_is_free,
-                "road_is_free" : road_is_free}
+                "location_is_free" : location_is_free}
     return Domain(problem, Types, Fluents)
 
 def create_problem(env : Enviorment, domain : Domain, start : list[int], goal : list[int]):
@@ -93,4 +91,12 @@ def create_problem(env : Enviorment, domain : Domain, start : list[int], goal : 
                 problem.add_goal(domain.Fluents["robot_at"](
                                                             robots[i],
                                                             locations[goal[i]]))
+        return problem
+
+def write_pddls(problem : Problem):
+        writer = PDDLWriter(problem)
+        writer.write_domain(DOMAIN_PATH)
+        writer.write_problem(PROBLEM_PATH)
+
+
                                                             

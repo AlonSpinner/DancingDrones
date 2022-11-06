@@ -1,0 +1,76 @@
+
+; Version LPG-td-1.4
+; Seed 1
+; Command line: ./lpg-td -o /home/alon18/repos/maildelivery/maildelivery/binary_solvers/domain.pddl -f /home/alon18/repos/maildelivery/maildelivery/binary_solvers/problem.pddl -n 3 -seed 1 -out /home/alon18/repos/maildelivery/maildelivery/binary_solvers/lpg/lpg_plan 
+; Problem /home/alon18/repos/maildelivery/maildelivery/binary_solvers/problem.pddl
+; Time 10.71
+; Search time 10.70
+; Parsing time 0.01
+; Mutex time 0.00
+; MakeSpan 6.14
+
+
+0.0002:   (MOVE R1 L21 L9) [0.1250]
+0.1255:   (MOVE R1 L9 L8) [0.3750]
+0.5007:   (MOVE R1 L8 L11) [0.1768]
+0.6778:   (PICKUP P2 R1 L11) [0.0000]
+0.6783:   (MOVE R1 L11 L8) [0.1768]
+0.8553:   (MOVE R1 L8 L14) [0.3750]
+0.0002:   (MOVE R2 L22 L15) [0.1250]
+0.1257:   (MOVE R2 L15 L9) [0.3750]
+0.5010:   (MOVE R2 L9 L19) [0.1768]
+0.6780:   (PICKUP P3 R2 L19) [0.0000]
+1.2306:   (MOVE R1 L14 L15) [0.3750]
+1.6058:   (MOVE R1 L15 L18) [0.1768]
+1.7829:   (DROP P2 R1 L18) [0.0000]
+1.7834:   (MOVE R1 L18 L15) [0.1768]
+0.0002:   (MOVE R0 L20 L2) [0.1250]
+0.1255:   (MOVE R0 L2 L1) [0.3750]
+0.5007:   (MOVE R0 L1 L0) [0.3750]
+0.8760:   (MOVE R0 L0 L4) [0.1768]
+1.0530:   (PICKUP P0 R0 L4) [0.0000]
+1.0535:   (MOVE R0 L4 L0) [0.1768]
+1.2306:   (MOVE R0 L0 L3) [0.3750]
+1.6058:   (MOVE R0 L3 L2) [0.3750]
+1.9811:   (MOVE R0 L2 L6) [0.1768]
+2.1581:   (DROP P0 R0 L6) [0.0000]
+2.1584:   (PICKUP P1 R0 L6) [0.0000]
+2.1587:   (MOVE R0 L6 L2) [0.1768]
+2.3357:   (MOVE R0 L2 L1) [0.3750]
+2.7110:   (MOVE R0 L1 L0) [0.3750]
+3.0862:   (MOVE R0 L0 L4) [0.1768]
+0.6785:   (MOVE R2 L19 L9) [0.1768]
+0.8556:   (MOVE R2 L9 L8) [0.3750]
+1.9604:   (MOVE R1 L15 L9) [0.3750]
+2.3360:   (MOVE R1 L9 L2) [0.3750]
+2.7112:   (MOVE R2 L8 L1) [0.3750]
+3.0865:   (MOVE R2 L1 L10) [0.1768]
+2.7112:   (MOVE R1 L2 L13) [0.1768]
+3.2635:   (DROP P3 R2 L10) [0.0000]
+2.8883:   (PICKUP P5 R1 L13) [0.0000]
+2.8888:   (MOVE R1 L13 L2) [0.1768]
+3.0658:   (MOVE R1 L2 L9) [0.3750]
+3.4411:   (MOVE R1 L9 L19) [0.1768]
+3.6181:   (DROP P5 R1 L19) [0.0000]
+3.2640:   (MOVE R2 L10 L1) [0.1768]
+3.4411:   (MOVE R2 L1 L8) [0.3750]
+3.8163:   (MOVE R2 L8 L16) [0.1768]
+3.9934:   (PICKUP P4 R2 L16) [0.0000]
+3.6186:   (MOVE R1 L19 L9) [0.1768]
+3.7957:   (MOVE R1 L9 L21) [0.1250]
+3.9939:   (MOVE R2 L16 L8) [0.1768]
+4.1709:   (MOVE R2 L8 L1) [0.3750]
+4.5462:   (MOVE R2 L1 L5) [0.1768]
+4.7232:   (DROP P4 R2 L5) [0.0000]
+4.7237:   (MOVE R2 L5 L1) [0.1768]
+4.9007:   (MOVE R2 L1 L8) [0.3750]
+5.2760:   (MOVE R2 L8 L14) [0.3750]
+5.6512:   (MOVE R2 L14 L15) [0.3750]
+6.0265:   (MOVE R2 L15 L22) [0.1250]
+3.2633:   (DROP P1 R0 L4) [0.0000]
+3.2638:   (MOVE R0 L4 L0) [0.1768]
+3.4408:   (MOVE R0 L0 L3) [0.3750]
+3.8161:   (MOVE R0 L3 L2) [0.3750]
+4.1913:   (MOVE R0 L2 L20) [0.1250]
+
+
