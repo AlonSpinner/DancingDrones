@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 def mesh_3D(edge_length : float, 
             N_cols_even : int, N_rows : int, N_depth : int):
