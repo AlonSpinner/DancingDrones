@@ -45,6 +45,6 @@ def mesh_3D(edge_length : float,
         VertexList[iv] - VertexList
         distances = np.linalg.norm(VertexList[iv] - VertexList,axis = 1)
         neighbors = (distances < 1.1 * edge_length) & (distances > 0.1 * edge_length)
-        connectivityList[iv] = np.where(neighbors)
+        connectivityList[iv] = np.where(neighbors)[0]
 
     return VertexList, connectivityList

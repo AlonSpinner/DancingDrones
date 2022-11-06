@@ -1,0 +1,6 @@
+README.md
+setup.py
+dancingdrones.egg-info/PKG-INFO
+dancingdrones.egg-info/SOURCES.txt
+dancingdrones.egg-info/dependency_links.txt
+dancingdrones.egg-info/top_level.txt

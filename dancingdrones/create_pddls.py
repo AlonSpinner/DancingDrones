@@ -16,7 +16,7 @@ import numpy as np
 @dataclass(frozen = False)
 class Enviorment:
     vertices : np.ndarray
-    connectivityList : list[list[int]]
+    connectivityList : dict[np.ndarray[int]]
 
 @dataclass(frozen = False)
 class Domain:
@@ -45,10 +45,8 @@ def create_domain() -> None:
     move.add_precondition(location_is_free(l_to))
     move.add_effect(robot_at(r, l_from), False)
     move.add_effect(location_is_free(l_from), True)
-    move.add_effect(road_is_free(l_from,l_to), False)
     move.add_effect(robot_at(r, l_to), True)
     move.add_effect(location_is_free(l_to), False)
-    move.add_effect(road_is_free(l_from,l_to), True)
 
     problem = Problem('dancing_drones')
     problem.add_action(move)
@@ -77,7 +75,8 @@ def create_problem(env : Enviorment, domain : Domain, start : list[int], goal : 
         problem.add_objects(locations + robots)
 
         #locations connectivity and distance
-        for i, clist in enumerate(env.connectivityList):
+        for i in env.connectivityList: #i is an int key in the connectivityList dict
+                clist = env.connectivityList[i]
                 for j in clist:
                         problem.set_initial_value(domain.Fluents["is_connected"](locations[i],
                                                                                  locations[j]), 
@@ -93,6 +92,5 @@ def create_problem(env : Enviorment, domain : Domain, start : list[int], goal : 
                                                 False)
                 problem.add_goal(domain.Fluents["robot_at"](
                                                             robots[i],
-                                                            locations[goal[i]],
-                                                            True))
+                                                            locations[goal[i]]))
                                                             
