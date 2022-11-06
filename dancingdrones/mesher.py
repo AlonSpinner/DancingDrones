@@ -1,4 +1,5 @@
 import numpy as np
+from dancingdrones.types import Enviorment
 
 def mesh_3D(edge_length : float, 
             N_cols_even : int, N_rows : int, N_depth : int):
@@ -47,4 +48,4 @@ def mesh_3D(edge_length : float,
         neighbors = (distances < 1.1 * edge_length) & (distances > 0.1 * edge_length)
         connectivityList[iv] = np.where(neighbors)[0]
 
-    return VertexList, connectivityList
+    return Enviorment(VertexList, connectivityList)

@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib as plt
+from dancingdrones.types import Enviorment
 
 def multiInterp2(x, xp, fp):
     '''
@@ -9,6 +11,27 @@ def multiInterp2(x, xp, fp):
     xp: 1D array of x-coordinates of the data points
     fp: 2D array of y-coordinates of the data points, fp.shape[0] == xp.shape[0]
     '''
-    j = np.searchsorted(xp, x) - 1
-    d = (x - xp[j]) / (xp[j + 1] - xp[j])
-    return ((1 - d) * fp[j].T + fp[j + 1].T * d).T
+    d = fp.shape[1]
+    fpT = fp.T
+    return np.array([np.interp(x, xp, fpT[i]) for i in range(d)]).T
+
+def findBounds(vertices):
+    '''
+    Find the bounds of the vertices
+    '''
+    x_min = np.min(vertices[:,0])
+    x_max = np.max(vertices[:,0])
+    y_min = np.min(vertices[:,1])
+    y_max = np.max(vertices[:,1])
+    z_min = np.min(vertices[:,2])
+    z_max = np.max(vertices[:,2])
+    return x_min, x_max, y_min, y_max, z_min, z_max
+
+def plot_env(ax, env : Enviorment):
+    ax.plot(env.vertices[:, 0], env.vertices[:, 1], env.vertices[:, 2], 'o')
+    for iv in range(env.vertices.shape[0]):
+        for jv in env.connectivityList[iv]:
+            ax.plot([env.vertices[iv, 0], env.vertices[jv, 0]],
+                        [env.vertices[iv, 1], env.vertices[jv, 1]],
+                        [env.vertices[iv, 2], env.vertices[jv, 2]],
+                        'k--',linewidth=0.1)

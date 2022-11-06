@@ -10,22 +10,9 @@ from unified_planning.model.metrics import MinimizeMakespan,\
      MinimizeActionCosts, MinimizeExpressionOnFinalState, MaximizeExpressionOnFinalState
 up.shortcuts.get_env().credits_stream = None #removes the printing planners credits 
 
-from dataclasses import dataclass
-import numpy as np
-import os
+
+from dancingdrones.types import Enviorment, Domain
 from dancingdrones.binary_solvers.paths import DOMAIN_PATH, PROBLEM_PATH
-
-@dataclass(frozen = False)
-class Enviorment:
-    vertices : np.ndarray
-    connectivityList : dict[np.ndarray[int]]
-
-@dataclass(frozen = False)
-class Domain:
-        problem : Problem
-        Types : dict
-        Fluents : dict
-
 
 def create_domain() -> None:
     location = UserType('location')
