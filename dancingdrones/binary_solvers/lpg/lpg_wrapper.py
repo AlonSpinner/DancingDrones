@@ -5,7 +5,7 @@ import os
 import subprocess
 from typing import Literal
 
-from maildelivery.binary_solvers.paths import DOMAIN_PATH, PROBLEM_PATH, PLAN_PATH, PDDL_DIR
+from dancingdrones.binary_solvers.paths import DOMAIN_PATH, PROBLEM_PATH, PLAN_PATH, PDDL_DIR
 DIR_PATH = os.path.join(os.path.dirname(__file__))
 BINARY_NAME = "lpg-td"
 LPG_PLAN_PATH = os.path.join(DIR_PATH,'lpg_plan')

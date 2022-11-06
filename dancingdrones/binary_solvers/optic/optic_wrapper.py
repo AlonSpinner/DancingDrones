@@ -4,7 +4,7 @@
 import os
 import subprocess
 
-from maildelivery.binary_solvers.paths import DOMAIN_PATH, PROBLEM_PATH, PLAN_PATH
+from dancingdrones.binary_solvers.paths import DOMAIN_PATH, PROBLEM_PATH, PLAN_PATH
 DIR_PATH = os.path.join(os.path.dirname(__file__))
 
 OPTIC_NO_LP = "optic-rewrite-no-lp" #rewrite is the "new version"

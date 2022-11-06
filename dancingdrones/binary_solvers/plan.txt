@@ -1,76 +1,58 @@
+Parsing and Instantiating...
+Done
+One way facts...
+Mutex groups...
+Semaphore Facts...
+Envelope Facts...
+One-shot actions...
+Integral variables...
+Variable bounds...
+Static numeric conditions...
+Duration bounds...
+TIL time window analysis...
+Bounding action timestamps due to time windows...
+Dominance constraints (excluding processes and events)...
+Damaging events...
+Dominance constraints (including processes and events)...
+Variable monotonicity...
+Max/min needed values for any single precondition...
+Irrelevant action pruning by backward reachability from goal...
+Uninterestingness criteria...
+Compression-safe actions...
+Compression-safe invariants...
+Goal Goal [2]
+    (robot_at r1 l53)
+    (robot_at r0 l55)
 
-; Version LPG-td-1.4
-; Seed 1
-; Command line: ./lpg-td -o /home/alon18/repos/maildelivery/maildelivery/binary_solvers/domain.pddl -f /home/alon18/repos/maildelivery/maildelivery/binary_solvers/problem.pddl -n 3 -seed 1 -out /home/alon18/repos/maildelivery/maildelivery/binary_solvers/lpg/lpg_plan 
-; Problem /home/alon18/repos/maildelivery/maildelivery/binary_solvers/problem.pddl
-; Time 10.71
-; Search time 10.70
-; Parsing time 0.01
-; Mutex time 0.00
-; MakeSpan 6.14
-
-
-0.0002:   (MOVE R1 L21 L9) [0.1250]
-0.1255:   (MOVE R1 L9 L8) [0.3750]
-0.5007:   (MOVE R1 L8 L11) [0.1768]
-0.6778:   (PICKUP P2 R1 L11) [0.0000]
-0.6783:   (MOVE R1 L11 L8) [0.1768]
-0.8553:   (MOVE R1 L8 L14) [0.3750]
-0.0002:   (MOVE R2 L22 L15) [0.1250]
-0.1257:   (MOVE R2 L15 L9) [0.3750]
-0.5010:   (MOVE R2 L9 L19) [0.1768]
-0.6780:   (PICKUP P3 R2 L19) [0.0000]
-1.2306:   (MOVE R1 L14 L15) [0.3750]
-1.6058:   (MOVE R1 L15 L18) [0.1768]
-1.7829:   (DROP P2 R1 L18) [0.0000]
-1.7834:   (MOVE R1 L18 L15) [0.1768]
-0.0002:   (MOVE R0 L20 L2) [0.1250]
-0.1255:   (MOVE R0 L2 L1) [0.3750]
-0.5007:   (MOVE R0 L1 L0) [0.3750]
-0.8760:   (MOVE R0 L0 L4) [0.1768]
-1.0530:   (PICKUP P0 R0 L4) [0.0000]
-1.0535:   (MOVE R0 L4 L0) [0.1768]
-1.2306:   (MOVE R0 L0 L3) [0.3750]
-1.6058:   (MOVE R0 L3 L2) [0.3750]
-1.9811:   (MOVE R0 L2 L6) [0.1768]
-2.1581:   (DROP P0 R0 L6) [0.0000]
-2.1584:   (PICKUP P1 R0 L6) [0.0000]
-2.1587:   (MOVE R0 L6 L2) [0.1768]
-2.3357:   (MOVE R0 L2 L1) [0.3750]
-2.7110:   (MOVE R0 L1 L0) [0.3750]
-3.0862:   (MOVE R0 L0 L4) [0.1768]
-0.6785:   (MOVE R2 L19 L9) [0.1768]
-0.8556:   (MOVE R2 L9 L8) [0.3750]
-1.9604:   (MOVE R1 L15 L9) [0.3750]
-2.3360:   (MOVE R1 L9 L2) [0.3750]
-2.7112:   (MOVE R2 L8 L1) [0.3750]
-3.0865:   (MOVE R2 L1 L10) [0.1768]
-2.7112:   (MOVE R1 L2 L13) [0.1768]
-3.2635:   (DROP P3 R2 L10) [0.0000]
-2.8883:   (PICKUP P5 R1 L13) [0.0000]
-2.8888:   (MOVE R1 L13 L2) [0.1768]
-3.0658:   (MOVE R1 L2 L9) [0.3750]
-3.4411:   (MOVE R1 L9 L19) [0.1768]
-3.6181:   (DROP P5 R1 L19) [0.0000]
-3.2640:   (MOVE R2 L10 L1) [0.1768]
-3.4411:   (MOVE R2 L1 L8) [0.3750]
-3.8163:   (MOVE R2 L8 L16) [0.1768]
-3.9934:   (PICKUP P4 R2 L16) [0.0000]
-3.6186:   (MOVE R1 L19 L9) [0.1768]
-3.7957:   (MOVE R1 L9 L21) [0.1250]
-3.9939:   (MOVE R2 L16 L8) [0.1768]
-4.1709:   (MOVE R2 L8 L1) [0.3750]
-4.5462:   (MOVE R2 L1 L5) [0.1768]
-4.7232:   (DROP P4 R2 L5) [0.0000]
-4.7237:   (MOVE R2 L5 L1) [0.1768]
-4.9007:   (MOVE R2 L1 L8) [0.3750]
-5.2760:   (MOVE R2 L8 L14) [0.3750]
-5.6512:   (MOVE R2 L14 L15) [0.3750]
-6.0265:   (MOVE R2 L15 L22) [0.1250]
-3.2633:   (DROP P1 R0 L4) [0.0000]
-3.2638:   (MOVE R0 L4 L0) [0.1768]
-3.4408:   (MOVE R0 L0 L3) [0.3750]
-3.8161:   (MOVE R0 L3 L2) [0.3750]
-4.1913:   (MOVE R0 L2 L20) [0.1250]
-
-
+Finishing preprocessing.  Making a TRPG heuristic...
+Making an open list...
+Running WA* search (g weight = 1, h weight = 5)
+{(robot_at r0 l0),(robot_at r1 l5),(location_is_free l1),(location_is_free l2),(location_is_free l3),(location_is_free l4),(location_is_free l6),(location_is_free l7),(location_is_free l8),(location_is_free l9),(location_is_free l10),(location_is_free l11),(location_is_free l12),(location_is_free l13),(location_is_free l14),(location_is_free l15),(location_is_free l16),(location_is_free l17),(location_is_free l18),(location_is_free l19),(location_is_free l20),(location_is_free l21),(location_is_free l22),(location_is_free l23),(location_is_free l24),(location_is_free l25),(location_is_free l26),(location_is_free l27),(location_is_free l28),(location_is_free l29),(location_is_free l30),(location_is_free l31),(location_is_free l32),(location_is_free l33),(location_is_free l34),(location_is_free l35),(location_is_free l36),(location_is_free l37),(location_is_free l38),(location_is_free l39),(location_is_free l40),(location_is_free l41),(location_is_free l42),(location_is_free l43),(location_is_free l44),(location_is_free l45),(location_is_free l46),(location_is_free l47),(location_is_free l48),(location_is_free l49),(location_is_free l50),(location_is_free l51),(location_is_free l52),(location_is_free l53),(location_is_free l54),(location_is_free l55)}
+[]
+Initial heuristic = 12
+Initial stats: t=0s, 6576kb
+b (11 @ n=2, t=0s, 6576kb)b (10 @ n=13, t=0s, 6576kb)b (9 @ n=24, t=0s, 6576kb)b (8 @ n=36, t=0.01s, 6576kb)b (7 @ n=43, t=0.01s, 6576kb)b (6 @ n=59, t=0.01s, 6576kb)b (5 @ n=71, t=0.01s, 6576kb)b (4 @ n=84, t=0.01s, 6576kb)b (3 @ n=92, t=0.01s, 6576kb)b (2 @ n=100, t=0.01s, 6576kb)b (1 @ n=108, t=0.01s, 6576kb)
+;;;; Solution Found
+; Time 0.01
+; Discounted time: 0.016
+; Metareasoning time: 0
+; Peak memory 6576kb
+; Nodes Generated: 115
+; Nodes Expanded:  12
+; Nodes Evaluated: 115
+; Nodes Tunneled:  0
+; Nodes memoised with open actions: 0
+; Nodes memoised without open actions: 141
+; Nodes pruned by memoisation: 26
+0: (move r0 l0 l1) [1]
+1: (move r0 l1 l15) [1]
+2: (move r0 l15 l19) [1]
+3: (move r0 l19 l23) [1]
+4: (move r1 l5 l19) [1]
+5: (move r1 l19 l22) [1]
+6: (move r1 l22 l25) [1]
+7: (move r0 l23 l27) [1]
+8: (move r1 l25 l39) [1]
+9: (move r0 l27 l41) [1]
+10: (move r1 l39 l53) [1]
+11: (move r0 l41 l55) [1]
