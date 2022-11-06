@@ -30,13 +30,13 @@ Running WA* search (g weight = 1, h weight = 5)
 {(robot_at r0 l0),(robot_at r1 l5),(location_is_free l1),(location_is_free l2),(location_is_free l3),(location_is_free l4),(location_is_free l6),(location_is_free l7),(location_is_free l8),(location_is_free l9),(location_is_free l10),(location_is_free l11),(location_is_free l12),(location_is_free l13),(location_is_free l14),(location_is_free l15),(location_is_free l16),(location_is_free l17),(location_is_free l18),(location_is_free l19),(location_is_free l20),(location_is_free l21),(location_is_free l22),(location_is_free l23),(location_is_free l24),(location_is_free l25),(location_is_free l26),(location_is_free l27),(location_is_free l28),(location_is_free l29),(location_is_free l30),(location_is_free l31),(location_is_free l32),(location_is_free l33),(location_is_free l34),(location_is_free l35),(location_is_free l36),(location_is_free l37),(location_is_free l38),(location_is_free l39),(location_is_free l40),(location_is_free l41),(location_is_free l42),(location_is_free l43),(location_is_free l44),(location_is_free l45),(location_is_free l46),(location_is_free l47),(location_is_free l48),(location_is_free l49),(location_is_free l50),(location_is_free l51),(location_is_free l52),(location_is_free l53),(location_is_free l54),(location_is_free l55)}
 []
 Initial heuristic = 12
-Initial stats: t=0s, 6576kb
-b (11 @ n=2, t=0s, 6576kb)b (10 @ n=13, t=0s, 6576kb)b (9 @ n=24, t=0s, 6576kb)b (8 @ n=36, t=0.01s, 6576kb)b (7 @ n=43, t=0.01s, 6576kb)b (6 @ n=59, t=0.01s, 6576kb)b (5 @ n=71, t=0.01s, 6576kb)b (4 @ n=84, t=0.01s, 6576kb)b (3 @ n=92, t=0.01s, 6576kb)b (2 @ n=100, t=0.01s, 6576kb)b (1 @ n=108, t=0.01s, 6576kb)
+Initial stats: t=0s, 6584kb
+b (11 @ n=2, t=0s, 6584kb)b (10 @ n=13, t=0s, 6584kb)b (9 @ n=24, t=0s, 6584kb)b (8 @ n=36, t=0.01s, 6584kb)b (7 @ n=43, t=0.01s, 6584kb)b (6 @ n=59, t=0.01s, 6584kb)b (5 @ n=71, t=0.01s, 6584kb)b (4 @ n=84, t=0.01s, 6584kb)b (3 @ n=92, t=0.01s, 6584kb)b (2 @ n=100, t=0.01s, 6584kb)b (1 @ n=108, t=0.01s, 6584kb)
 ;;;; Solution Found
 ; Time 0.01
 ; Discounted time: 0.016
 ; Metareasoning time: 0
-; Peak memory 6576kb
+; Peak memory 6584kb
 ; Nodes Generated: 115
 ; Nodes Expanded:  12
 ; Nodes Evaluated: 115
