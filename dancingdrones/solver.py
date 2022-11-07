@@ -31,10 +31,14 @@ def plan_per_agent(execution_times, actions) -> dict[int, np.ndarray]:
     
     return plan
 
-def compress_move_action(action : Tuple[str, str, str, str]) -> list[int,int]:
+def compress_move_action(action : Tuple[str, str, str, str],
+                         landmark = "first") -> list[int,int]:
     '''
-    takes an action ('move','r<N>','l<M>','l<K>') and outputs [<K>]
+    takes an action ('move','r<N>','l<M>','l<K>') and outputs [<K>] (default)
 
     '''
     assert action[0] == 'move'
-    return int(action[3][1:])
+    if landmark == "first":
+        return int(action[2][1:])
+    else: #"second"
+        return int(action[3][1:])

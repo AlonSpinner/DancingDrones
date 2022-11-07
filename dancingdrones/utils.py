@@ -27,11 +27,14 @@ def findBounds(vertices):
     z_max = np.max(vertices[:,2])
     return x_min, x_max, y_min, y_max, z_min, z_max
 
-def plot_env(ax, env : Enviorment):
-    ax.plot(env.vertices[:, 0], env.vertices[:, 1], env.vertices[:, 2], 'o')
+def plot_env(ax, env : Enviorment, texts = 'off'):
+    ax.plot(env.vertices[:, 0], env.vertices[:, 1], env.vertices[:, 2], 'o', markersize = 2.0)
     for iv in range(env.vertices.shape[0]):
         for jv in env.connectivityList[iv]:
             ax.plot([env.vertices[iv, 0], env.vertices[jv, 0]],
                         [env.vertices[iv, 1], env.vertices[jv, 1]],
                         [env.vertices[iv, 2], env.vertices[jv, 2]],
                         'k--',linewidth=0.1)
+    if texts == 'on':
+        for iv in range(env.vertices.shape[0]):
+            ax.text(env.vertices[iv, 0], env.vertices[iv, 1], env.vertices[iv, 2], str(iv))
