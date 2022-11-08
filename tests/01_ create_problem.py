@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
 
-env = mesh_3D(edge_length = 1.0, N_cols_even = 2, N_rows = 4, N_depth = 2)
+env = mesh_3D(edge_length = 1.0, N_cols_even = 4, N_rows = 3, N_depth = 2)
 domain = create_domain()
 
 #set amount of drones, initials and goals
@@ -54,6 +54,7 @@ ax = fig.add_subplot(111, projection='3d')
 ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z')
 bounds = utils.findBounds(env.vertices)
 ax.set_xlim(bounds[0],bounds[1]); ax.set_ylim(bounds[2],bounds[3]); ax.set_zlim(bounds[4],bounds[5])
+ax.set_box_aspect((bounds[1]-bounds[0],bounds[3]-bounds[2],bounds[5]-bounds[4])) #this produces errors
 utils.plot_env(ax, env, texts = 'on')
 colors = mpl.cm.rainbow(np.linspace(0, 1, len(trajectories)))
 colors = colors[:,:3]
