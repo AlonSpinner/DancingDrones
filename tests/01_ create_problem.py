@@ -1,5 +1,5 @@
 from dancingdrones.mesher import mesh_3D
-from dancingdrones.create_pddls import create_domain, create_problem, write_pddls
+from dancingdrones.create_pddls import create_domain, create_problem
 from dancingdrones.solver import solve, plan_per_agent
 import dancingdrones.utils as utils
 import matplotlib.pyplot as plt
@@ -21,9 +21,8 @@ goal = np.random.randint(0, env.N_vertices() - 1, N_drones)
 
 
 problem = create_problem(env, domain, start, goal)
-write_pddls(problem)
 
-execution_times, actions, durations = solve(engine_name = 'optic')
+execution_times, actions, durations = solve(problem, engine_name = 'optic')
 #increment execution times by 1 step to account for the initial state
 execution_times = np.array(execution_times) + 1.0
 

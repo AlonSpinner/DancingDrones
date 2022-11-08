@@ -1,9 +1,13 @@
 from dancingdrones.binary_solvers.optic import optic_wrapper
 from dancingdrones.binary_solvers.lpg import lpg_wrapper
+from dancingdrones.create_pddls import write_pddls
 from typing import Tuple
 import numpy as np
+from unified_planning.shortcuts import Problem
 
-def solve(engine_name = 'optic'):
+def solve(problem : Problem, engine_name : str = 'optic'):
+    #write pddls to run binary solvers on
+    write_pddls(problem)
 
     if engine_name == 'lpg':        
         sucess = lpg_wrapper.run()

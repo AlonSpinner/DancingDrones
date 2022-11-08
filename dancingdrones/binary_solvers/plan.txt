@@ -31,11 +31,11 @@ Running WA* search (g weight = 1, h weight = 5)
 {(robot_at r0 l40),(robot_at r1 l15),(robot_at r2 l45),(location_is_free l0),(location_is_free l1),(location_is_free l2),(location_is_free l3),(location_is_free l4),(location_is_free l5),(location_is_free l6),(location_is_free l7),(location_is_free l8),(location_is_free l9),(location_is_free l10),(location_is_free l11),(location_is_free l12),(location_is_free l13),(location_is_free l14),(location_is_free l16),(location_is_free l17),(location_is_free l18),(location_is_free l19),(location_is_free l20),(location_is_free l21),(location_is_free l22),(location_is_free l23),(location_is_free l24),(location_is_free l25),(location_is_free l26),(location_is_free l27),(location_is_free l28),(location_is_free l29),(location_is_free l30),(location_is_free l31),(location_is_free l32),(location_is_free l33),(location_is_free l34),(location_is_free l35),(location_is_free l36),(location_is_free l37),(location_is_free l38),(location_is_free l39),(location_is_free l41),(location_is_free l42),(location_is_free l43),(location_is_free l44),(location_is_free l46),(location_is_free l47),(location_is_free l48),(location_is_free l49),(location_is_free l50),(location_is_free l51),(location_is_free l52),(location_is_free l53),(location_is_free l54),(location_is_free l55)}
 []
 Initial heuristic = 7
-Initial stats: t=0s, 7116kb
+Initial stats: t=0.01s, 7116kb
 b (6 @ n=5, t=0.01s, 7116kb)b (5 @ n=19, t=0.01s, 7116kb)b (4 @ n=34, t=0.01s, 7116kb)b (3 @ n=45, t=0.01s, 7116kb)b (2 @ n=68, t=0.01s, 7116kb)b (1 @ n=83, t=0.01s, 7116kb)
 ;;;; Solution Found
 ; Time 0.01
-; Discounted time: 0.016
+; Discounted time: 0.017
 ; Metareasoning time: 0
 ; Peak memory 7116kb
 ; Nodes Generated: 102
