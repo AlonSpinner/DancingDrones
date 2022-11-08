@@ -1,6 +1,11 @@
 import numpy as np
-import matplotlib as plt
 from dancingdrones.types import Enviorment
+
+def random_state(N_agents : int , N_vertices : int, seed : int) -> np.ndarray:
+    state = np.arange(N_vertices)
+    np.random.seed(seed)
+    np.random.shuffle(state)
+    return state[:N_agents]
 
 def multiInterp2(x, xp, fp):
     '''

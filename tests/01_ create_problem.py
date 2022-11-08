@@ -6,16 +6,14 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
 
-np.random.seed(2)
-
-env = mesh_3D(edge_length = 1.0, N_cols_even = 4, N_rows = 4, N_depth = 4)
-
+env = mesh_3D(edge_length = 1.0, N_cols_even = 2, N_rows = 4, N_depth = 2)
 domain = create_domain()
 
 #set amount of drones, initials and goals
-N_drones = 3
-start = np.random.randint(0, env.N_vertices() - 1, N_drones)
-goal = np.random.randint(0, env.N_vertices() - 1, N_drones)
+N_agents = 10
+start = utils.random_state(N_agents, env.N_vertices(), seed = 5)
+goal = utils.random_state(N_agents, env.N_vertices(), seed = 3)
+
 # start = np.array([0, 5])
 # goal = np.array([env.N_vertices() - 1, env.N_vertices() - 3])
 
@@ -28,7 +26,7 @@ execution_times = np.array(execution_times) + 1.0
 
 plan = plan_per_agent(execution_times, actions)
 finish_time = np.max(execution_times)
-for agent in range(N_drones):
+for agent in range(N_agents):
     if agent in plan.keys():
         #add first point to plan, as plan is for move to locations
         first_vertex_id = start[agent]
@@ -45,7 +43,7 @@ for agent in range(N_drones):
 
 N_points = 100
 time_vec = np.linspace(0,finish_time,N_points)
-trajectories = dict.fromkeys(range(N_drones))
+trajectories = dict.fromkeys(range(N_agents))
 for agent in trajectories:
     agent_t = plan[agent][:,0]
     agent_v = env.vertices[plan[agent][:,1].astype(int)]
@@ -61,10 +59,11 @@ colors = mpl.cm.rainbow(np.linspace(0, 1, len(trajectories)))
 colors = colors[:,:3]
 graphics = []
 for agent in trajectories:
-    ax.scatter(trajectories[agent][0,0],
-               trajectories[agent][0,1], 
-               trajectories[agent][0,2], 
-               color = colors[agent], s = 100, marker = 'o')
+    #initial poistions
+    # ax.scatter(trajectories[agent][0,0],
+    #            trajectories[agent][0,1], 
+    #            trajectories[agent][0,2], 
+    #            color = colors[agent], s = 100, marker = 'o')
     ax.scatter(trajectories[agent][-1,0],
                trajectories[agent][-1,1], 
                trajectories[agent][-1,2], 
@@ -72,12 +71,15 @@ for agent in trajectories:
     line, = plt.plot([],[],[],color = colors[agent])
     head, = plt.plot([],[],[],color = colors[agent], marker = 's', markersize = 10)
     graphics.append({"line": line, "head": head})
+
+tail_length = 5
 with plt.ion():
     for i in range(N_points):
+        l = max(i - tail_length,0)
         for agent in trajectories:
-            graphics[agent]["line"].set_data(trajectories[agent][:i,0],
-                                     trajectories[agent][:i,1])
-            graphics[agent]["line"].set_3d_properties(trajectories[agent][:i,2])
+            graphics[agent]["line"].set_data(trajectories[agent][l:i,0],
+                                     trajectories[agent][l:i,1])
+            graphics[agent]["line"].set_3d_properties(trajectories[agent][l:i,2])
             graphics[agent]["head"].set_data([trajectories[agent][i,0]],
                                      [trajectories[agent][i,1]])
             graphics[agent]["head"].set_3d_properties([trajectories[agent][i,2]])

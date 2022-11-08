@@ -11,14 +11,18 @@ def solve(problem : Problem, engine_name : str = 'optic'):
 
     if engine_name == 'lpg':        
         sucess = lpg_wrapper.run()
-        assert sucess, 'solver failed'
         execution_times, actions, durations = lpg_wrapper.get_plan()
+        
+        if bool(actions) == False or not sucess:
+            raise Exception("No plan found")
         return execution_times, actions, durations
 
     if engine_name == 'optic':        
         sucess = optic_wrapper.run()
-        assert sucess, 'solver failed'
         execution_times, actions, durations = optic_wrapper.get_plan()
+        
+        if bool(actions) == False or not sucess:
+            raise Exception("No plan found")
         return execution_times, actions, durations
 
 def plan_per_agent(execution_times, actions) -> dict[int, np.ndarray]:
@@ -36,13 +40,13 @@ def plan_per_agent(execution_times, actions) -> dict[int, np.ndarray]:
     return plan
 
 def compress_move_action(action : Tuple[str, str, str, str],
-                         landmark = "first") -> list[int,int]:
+                         landmark = "second") -> list[int,int]:
     '''
     takes an action ('move','r<N>','l<M>','l<K>') and outputs [<K>] (default)
 
     '''
     assert action[0] == 'move'
-    if landmark == "first":
-        return int(action[2][1:])
-    else: #"second"
+    if landmark == "second":
         return int(action[3][1:])
+    else: #"first"
+        return int(action[2][1:])
