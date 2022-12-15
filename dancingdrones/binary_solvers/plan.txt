@@ -20,7 +20,12 @@ Irrelevant action pruning by backward reachability from goal...
 Uninterestingness criteria...
 Compression-safe actions...
 Compression-safe invariants...
-Goal Goal [10]
+Goal Goal [15]
+    (robot_at r14 l15)
+    (robot_at r13 l17)
+    (robot_at r12 l5)
+    (robot_at r11 l7)
+    (robot_at r10 l6)
     (robot_at r9 l18)
     (robot_at r8 l4)
     (robot_at r7 l19)
@@ -35,45 +40,90 @@ Goal Goal [10]
 Finishing preprocessing.  Making a TRPG heuristic...
 Making an open list...
 Running WA* search (g weight = 1, h weight = 5)
-{(robot_at r0 l18),(robot_at r1 l2),(robot_at r2 l17),(robot_at r3 l19),(robot_at r4 l20),(robot_at r5 l21),(robot_at r6 l10),(robot_at r7 l5),(robot_at r8 l1),(robot_at r9 l13),(location_is_free l0),(location_is_free l3),(location_is_free l4),(location_is_free l6),(location_is_free l7),(location_is_free l8),(location_is_free l9),(location_is_free l11),(location_is_free l12),(location_is_free l14),(location_is_free l15),(location_is_free l16)}
+{(robot_at r0 l18),(robot_at r1 l2),(robot_at r2 l17),(robot_at r3 l19),(robot_at r4 l20),(robot_at r5 l21),(robot_at r6 l10),(robot_at r7 l5),(robot_at r8 l1),(robot_at r9 l13),(robot_at r10 l12),(robot_at r11 l0),(robot_at r12 l11),(robot_at r13 l7),(robot_at r14 l4),(location_is_free l3),(location_is_free l6),(location_is_free l8),(location_is_free l9),(location_is_free l14),(location_is_free l15),(location_is_free l16)}
 []
-Initial heuristic = 27
-Initial stats: t=0s, 7100kb
-b (26 @ n=2, t=0s, 7100kb)b (25 @ n=10, t=0.01s, 7100kb)b (24 @ n=27, t=0.01s, 7100kb)b (23 @ n=40, t=0.01s, 7100kb)b (22 @ n=62, t=0.01s, 7100kb)b (21 @ n=64, t=0.02s, 7100kb)b (20 @ n=89, t=0.02s, 7100kb)b (19 @ n=107, t=0.02s, 7100kb)b (18 @ n=136, t=0.03s, 7100kb)b (17 @ n=170, t=0.03s, 7100kb)b (16 @ n=192, t=0.03s, 7100kb)b (15 @ n=213, t=0.04s, 7100kb)b (14 @ n=277, t=0.04s, 7100kb)b (13 @ n=280, t=0.04s, 7100kb)b (12 @ n=304, t=0.05s, 7100kb)b (11 @ n=335, t=0.05s, 7100kb)b (10 @ n=359, t=0.05s, 7232kb)b (9 @ n=386, t=0.06s, 7232kb)b (8 @ n=421, t=0.06s, 7232kb)b (7 @ n=445, t=0.06s, 7232kb)b (6 @ n=450, t=0.06s, 7232kb)b (5 @ n=470, t=0.06s, 7232kb)b (4 @ n=501, t=0.07s, 7232kb)b (3 @ n=532, t=0.07s, 7232kb)b (2 @ n=592, t=0.07s, 7356kb)b (1 @ n=616, t=0.08s, 7356kb)
+Initial heuristic = 43
+Initial stats: t=0.01s, 8052kb
+b (42 @ n=3, t=0.01s, 8052kb)b (41 @ n=4, t=0.01s, 8052kb)b (38 @ n=8, t=0.01s, 8052kb)b (37 @ n=28, t=0.02s, 8052kb)b (36 @ n=47, t=0.02s, 8052kb)b (35 @ n=53, t=0.02s, 8052kb)b (34 @ n=90, t=0.03s, 8052kb)b (33 @ n=176, t=0.05s, 8052kb)b (32 @ n=295, t=0.08s, 8052kb)b (31 @ n=344, t=0.09s, 8052kb)b (30 @ n=380, t=0.1s, 8052kb)b (28 @ n=454, t=0.12s, 8052kb)b (27 @ n=510, t=0.13s, 8052kb)b (26 @ n=530, t=0.14s, 8052kb)b (25 @ n=743, t=0.18s, 8184kb)b (22 @ n=1085, t=0.26s, 8312kb).{EPTU=197.628,ETD=3.08163}b (21 @ n=1351, t=0.31s, 8440kb)b (20 @ n=1393, t=0.32s, 8440kb)b (19 @ n=1484, t=0.33s, 8568kb).{EPTU=223.214,ETD=7.15152}.{EPTU=235.479,ETD=12.1409}b (18 @ n=3261, t=0.68s, 9340kb)b (17 @ n=3329, t=0.7s, 9340kb).{EPTU=240.964,ETD=11.603}b (16 @ n=4297, t=0.88s, 9724kb)b (15 @ n=4372, t=0.89s, 9848kb)b (14 @ n=4404, t=0.9s, 9848kb)b (13 @ n=4452, t=0.91s, 9848kb)b (11 @ n=4485, t=0.91s, 9848kb)b (10 @ n=4515, t=0.92s, 9848kb)b (9 @ n=4517, t=0.92s, 9848kb)b (8 @ n=4540, t=0.92s, 9848kb).{EPTU=249.75,ETD=10.9719}.{EPTU=258.621,ETD=12.2542}b (7 @ n=6011, t=1.17s, 10496kb)b (6 @ n=6027, t=1.17s, 10496kb)b (5 @ n=6050, t=1.18s, 10496kb)b (4 @ n=6074, t=1.18s, 10496kb)b (3 @ n=6104, t=1.18s, 10624kb).{EPTU=272.586,ETD=12.6934}.{EPTU=284.091,ETD=17.9098}b (2 @ n=7844, t=1.48s, 11272kb)b (1 @ n=7871, t=1.48s, 11400kb)
 ;;;; Solution Found
-; Time 0.08
-; Discounted time: 0.083
+; Time 1.48
+; Discounted time: 1.493
 ; Metareasoning time: 0
-; Peak memory 7356kb
-; Nodes Generated: 663
-; Nodes Expanded:  26
-; Nodes Evaluated: 638
+; Peak memory 11400kb
+; Nodes Generated: 7903
+; Nodes Expanded:  431
+; Nodes Evaluated: 7892
 ; Nodes Tunneled:  0
 ; Nodes memoised with open actions: 0
-; Nodes memoised without open actions: 710
-; Nodes pruned by memoisation: 47
-0: (move r2 l17 l16) [1]
-1: (move r8 l1 l4) [1]
-2: (move r6 l10 l6) [1]
-3: (move r5 l21 l17) [1]
-4: (move r5 l17 l14) [1]
-5: (move r4 l20 l17) [1]
-6: (move r7 l5 l8) [1]
-7: (move r6 l6 l5) [1]
-8: (move r4 l17 l6) [1]
-9: (move r9 l13 l12) [1]
-10: (move r1 l2 l13) [1]
-11: (move r9 l12 l11) [1]
-12: (move r3 l19 l15) [1]
-13: (move r3 l15 l12) [1]
-14: (move r9 l11 l15) [1]
-15: (move r0 l18 l19) [1]
-16: (move r0 l19 l20) [1]
-17: (move r9 l15 l18) [1]
-18: (move r7 l8 l19) [1]
-19: (move r4 l6 l2) [1]
-20: (move r3 l12 l1) [1]
-21: (move r3 l1 l0) [1]
-22: (move r6 l5 l1) [1]
-23: (move r6 l1 l12) [1]
-24: (move r3 l0 l1) [1]
+; Nodes memoised without open actions: 10142
+; Nodes pruned by memoisation: 2239
+0: (move r14 l4 l15) [1]
+1: (move r7 l5 l8) [1]
+2: (move r2 l17 l14) [1]
+3: (move r6 l10 l9) [1]
+4: (move r6 l9 l5) [1]
+5: (move r4 l20 l9) [1]
+6: (move r4 l9 l6) [1]
+7: (move r4 l6 l3) [1]
+8: (move r3 l19 l20) [1]
+9: (move r3 l20 l9) [1]
+10: (move r6 l5 l16) [1]
+11: (move r6 l16 l20) [1]
+12: (move r13 l7 l4) [1]
+13: (move r13 l4 l5) [1]
+14: (move r13 l5 l6) [1]
+15: (move r3 l9 l5) [1]
+16: (move r8 l1 l4) [1]
+17: (move r3 l5 l1) [1]
+18: (move r1 l2 l5) [1]
+19: (move r4 l3 l2) [1]
+20: (move r5 l21 l10) [1]
+21: (move r13 l6 l17) [1]
+22: (move r5 l10 l6) [1]
+23: (move r5 l6 l3) [1]
+24: (move r7 l8 l9) [1]
+25: (move r8 l4 l8) [1]
+26: (move r11 l0 l4) [1]
+27: (move r12 l11 l0) [1]
+28: (move r11 l4 l7) [1]
+29: (move r8 l8 l4) [1]
+30: (move r7 l9 l8) [1]
+31: (move r7 l8 l19) [1]
+32: (move r14 l15 l11) [1]
+33: (move r0 l18 l15) [1]
+34: (move r8 l4 l8) [1]
+35: (move r12 l0 l4) [1]
+36: (move r1 l5 l9) [1]
+37: (move r12 l4 l5) [1]
+38: (move r13 l17 l21) [1]
+39: (move r8 l8 l4) [1]
+40: (move r1 l9 l6) [1]
+41: (move r1 l6 l17) [1]
+42: (move r9 l13 l16) [1]
+43: (move r1 l17 l13) [1]
+44: (move r0 l15 l18) [1]
+45: (move r9 l16 l15) [1]
+46: (move r7 l19 l8) [1]
+47: (move r2 l14 l17) [1]
+48: (move r5 l3 l14) [1]
+49: (move r2 l17 l16) [1]
+50: (move r0 l18 l19) [1]
+51: (move r6 l20 l17) [1]
+52: (move r0 l19 l20) [1]
+53: (move r9 l15 l18) [1]
+54: (move r2 l16 l15) [1]
+55: (move r7 l8 l19) [1]
+56: (move r10 l12 l16) [1]
+57: (move r1 l13 l12) [1]
+58: (move r6 l17 l13) [1]
+59: (move r10 l16 l17) [1]
+60: (move r10 l17 l6) [1]
+61: (move r2 l15 l16) [1]
+62: (move r1 l12 l15) [1]
+63: (move r6 l13 l12) [1]
+64: (move r2 l16 l17) [1]
+65: (move r1 l15 l16) [1]
+66: (move r1 l16 l13) [1]
+67: (move r14 l11 l15) [1]
+68: (move r2 l17 l16) [1]
+69: (move r13 l21 l17) [1]
