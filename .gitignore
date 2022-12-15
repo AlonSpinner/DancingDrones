@@ -1,1 +1,3 @@
 *.pyc
+dancingdrones/binary_solvers/plan.txt
+dancingdrones/binary_solvers/problem.pddl

@@ -10,7 +10,7 @@ env = mesh_3D(edge_length = 1.0, N_cols_even = 4, N_rows = 3, N_depth = 2)
 domain = create_domain()
 
 #set amount of drones, initials and goals
-N_agents = 10
+N_agents = 15
 start = utils.random_state(N_agents, env.N_vertices(), seed = 5)
 goal = utils.random_state(N_agents, env.N_vertices(), seed = 3)
 
@@ -74,6 +74,7 @@ for agent in trajectories:
     graphics.append({"line": line, "head": head})
 
 tail_length = 5
+plt.pause(3)
 with plt.ion():
     for i in range(N_points):
         l = max(i - tail_length,0)
@@ -84,5 +85,5 @@ with plt.ion():
             graphics[agent]["head"].set_data([trajectories[agent][i,0]],
                                      [trajectories[agent][i,1]])
             graphics[agent]["head"].set_3d_properties([trajectories[agent][i,2]])
-        plt.pause(0.01)
+        plt.pause(0.005)
 plt.show()
